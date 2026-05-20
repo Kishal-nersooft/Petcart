@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetCart - Checkout</title>
+  <meta name="description" content="Checkout — PetCart">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top" class="checkout-body">
+
+  <header class="header checkout-header" data-header>
+    <div class="container checkout-header-inner">
+      <a href="./index.html" class="logo" title="Back to home">PetCart</a>
+      <button type="button" class="action-btn checkout-header-cart" aria-label="Open shopping cart" data-cart-open>
+        <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+        <span class="btn-badge" data-cart-badge>0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="shop-main">
+    <article>
+
+      <section class="section checkout-page" aria-label="Checkout">
+        <div class="container">
+
+          <div class="checkout-page-top">
+            <nav class="checkout-page-breadcrumb" aria-label="Breadcrumb">
+              <ol class="checkout-breadcrumb-list">
+                <li>
+                  <a href="./index.html">Home</a>
+                </li>
+                <li class="checkout-breadcrumb-sep" aria-hidden="true">/</li>
+                <li>
+                  <a href="./shop.html">Shop</a>
+                </li>
+                <li class="checkout-breadcrumb-sep" aria-hidden="true">/</li>
+                <li>
+                  <span aria-current="page">Checkout</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+          <ol class="checkout-steps" aria-label="Checkout progress">
+            <li class="checkout-step checkout-step--done" data-checkout-step="review">
+              <span class="checkout-step-icon" aria-hidden="true">
+                <ion-icon name="checkmark"></ion-icon>
+              </span>
+              <span class="checkout-step-label">Review order</span>
+            </li>
+            <li class="checkout-step checkout-step--current" data-checkout-step="address" aria-current="step">
+              <span class="checkout-step-icon" aria-hidden="true">
+                <ion-icon name="location-outline"></ion-icon>
+              </span>
+              <span class="checkout-step-label">Address</span>
+            </li>
+            <li class="checkout-step checkout-step--pending" data-checkout-step="confirm">
+              <span class="checkout-step-icon" aria-hidden="true">
+                <span class="checkout-step-num">3</span>
+              </span>
+              <span class="checkout-step-label">Confirm order</span>
+            </li>
+          </ol>
+
+          <div class="checkout-layout" data-checkout-app>
+
+            <div class="checkout-main">
+
+              <div class="checkout-panel" data-checkout-panel="address">
+                <div class="checkout-card">
+                  <h2 class="checkout-card-title">Your Address</h2>
+                  <p class="checkout-card-hint">Required fields are marked.</p>
+
+                  <form id="checkout-address-form" class="checkout-form-grid checkout-form--address" action="#"
+                    method="post" novalidate>
+                    <div class="checkout-field">
+                      <label for="co-first">First name <span class="checkout-req">*</span></label>
+                      <input id="co-first" name="firstName" type="text" autocomplete="given-name" required
+                        placeholder="First name">
+                    </div>
+                    <div class="checkout-field">
+                      <label for="co-last">Last name <span class="checkout-req">*</span></label>
+                      <input id="co-last" name="lastName" type="text" autocomplete="family-name" required
+                        placeholder="Last name">
+                    </div>
+                    <div class="checkout-field">
+                      <label for="co-email">Email <span class="checkout-req">*</span></label>
+                      <input id="co-email" name="email" type="email" autocomplete="email" required
+                        placeholder="Email">
+                    </div>
+                    <div class="checkout-field">
+                      <label for="co-phone">Phone <span class="checkout-req">*</span></label>
+                      <div class="checkout-phone-row">
+                        <div class="checkout-phone-country" title="Country / region">
+                          <span class="checkout-flag" aria-hidden="true">🇱🇰</span>
+                          <select class="checkout-country-select" name="phonePrefix" aria-label="Country code">
+                            <option value="+94" selected>+94</option>
+                          </select>
+                        </div>
+                        <input id="co-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel-national"
+                          required placeholder="77 000 0000" aria-label="Phone number">
+                      </div>
+                    </div>
+                    <div class="checkout-field checkout-field--full">
+                      <label for="co-company">Company name</label>
+                      <input id="co-company" name="company" type="text" autocomplete="organization"
+                        placeholder="Company name">
+                    </div>
+                    <div class="checkout-field checkout-field--full">
+                      <label for="co-tin">TIN / VAT</label>
+                      <input id="co-tin" name="tin" type="text" placeholder="TIN / VAT">
+                    </div>
+                    <div class="checkout-field checkout-field--full">
+                      <label for="co-street1">Street and number <span class="checkout-req">*</span></label>
+                      <input id="co-street1" name="street1" type="text" autocomplete="address-line1" required
+                        placeholder="Street and number">
+                    </div>
+                    <div class="checkout-field checkout-field--full">
+                      <label for="co-street2">Street 2</label>
+                      <input id="co-street2" name="street2" type="text" autocomplete="address-line2"
+                        placeholder="Apartment, suite, etc.">
+                    </div>
+                    <div class="checkout-field">
+                      <label for="co-city">City <span class="checkout-req">*</span></label>
+                      <input id="co-city" name="city" type="text" autocomplete="address-level2" required
+                        placeholder="City…">
+                    </div>
+                    <div class="checkout-field">
+                      <label for="co-zip">Zip code <span class="checkout-req">*</span></label>
+                      <input id="co-zip" name="zip" type="text" autocomplete="postal-code" required
+                        placeholder="Zip code">
+                    </div>
+                    <div class="checkout-field checkout-field--full checkout-field--checkbox">
+                      <label class="checkout-checkbox-label">
+                        <input type="checkbox" name="shipSame" value="1" checked>
+                        <span>Ship to the same address</span>
+                      </label>
+                    </div>
+                    <div class="checkout-actions checkout-field--full">
+                      <button type="button" class="btn cart-checkout-btn" id="checkout-continue">Continue to confirm
+                        order</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="checkout-panel" data-checkout-panel="confirm" hidden>
+                <div class="checkout-card">
+                  <h2 class="checkout-card-title checkout-confirm-page-title">Confirm order</h2>
+
+                  <div class="checkout-confirm-block">
+                    <div class="checkout-billing-head">
+                      <h3 class="checkout-confirm-sub">Billing &amp; Shipping</h3>
+                      <button type="button" class="checkout-edit-btn" id="checkout-edit-address">
+                        <ion-icon name="create-outline" aria-hidden="true"></ion-icon>
+                        <span>Edit</span>
+                      </button>
+                    </div>
+                    <p class="checkout-confirm-text" data-confirm-billing></p>
+                  </div>
+
+                  <div class="checkout-confirm-block">
+                    <h3 class="checkout-confirm-sub">Choose a delivery method</h3>
+                    <ul class="checkout-option-list">
+                      <li>
+                        <label class="checkout-option">
+                          <input type="radio" name="delivery" value="400" data-label="Outer Colombo" checked>
+                          <span class="checkout-option-body">
+                            <span class="checkout-option-title">Outer Colombo</span>
+                            <span class="checkout-option-price">Rs 400.00</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="checkout-option">
+                          <input type="radio" name="delivery" value="400" data-label="Remote Area Charges">
+                          <span class="checkout-option-body">
+                            <span class="checkout-option-title">Remote Area Charges</span>
+                            <span class="checkout-option-price">Rs 400.00</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="checkout-option">
+                          <input type="radio" name="delivery" value="0" data-label="Store Pick-Up">
+                          <span class="checkout-option-body">
+                            <span class="checkout-option-title">Store Pick-Up</span>
+                            <span class="checkout-option-price">Free</span>
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="checkout-confirm-block">
+                    <h3 class="checkout-confirm-sub">Pay with</h3>
+                    <ul class="checkout-option-list">
+                      <li>
+                        <label class="checkout-option">
+                          <input type="radio" name="pay" value="cod" data-pay-label="Cash on Delivery" checked>
+                          <span class="checkout-option-body">
+                            <span class="checkout-option-title">Cash on Delivery</span>
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <label class="checkout-option">
+                          <input type="radio" name="pay" value="sampath" data-pay-label="Sampath Payment Gateway">
+                          <span class="checkout-option-body">
+                            <span class="checkout-option-title">Sampath Payment Gateway</span>
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                    <details class="checkout-pay-more">
+                      <summary>Show more</summary>
+                      <p class="checkout-muted checkout-paycorp-note">You will be connected with Paycorp.</p>
+                    </details>
+                  </div>
+
+                  <p class="checkout-policies">
+                    <a href="#" class="link">Return, Refund, Cancellation Policies</a>
+                  </p>
+
+                  <div class="checkout-actions">
+                    <button type="button" class="btn cart-checkout-btn" id="checkout-pay">Pay</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkout-panel" data-checkout-panel="paid" hidden>
+                <div class="checkout-card checkout-paid-card">
+                  <h2 class="checkout-paid-title" data-paid-order-id>Order S00000</h2>
+
+                  <div class="checkout-paid-block">
+                    <h3 class="checkout-confirm-sub">Payment Information</h3>
+                    <table class="checkout-paid-table">
+                      <tbody>
+                        <tr>
+                          <td data-paid-paymethod>Cash on Delivery</td>
+                          <td class="checkout-paid-muted">Total:</td>
+                          <td class="checkout-paid-total" data-paid-total>Rs 0.00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p class="checkout-paid-note">Please use the following transfer details</p>
+                    <p class="checkout-paid-strong">Bank Accounts</p>
+                    <p class="checkout-paid-strong">Communication</p>
+                    <p class="checkout-muted">Please use the order name as a communication reference.</p>
+                    <p class="checkout-paid-comm"><span class="checkout-paid-muted">Communication:</span> <span
+                        data-paid-communication></span></p>
+                  </div>
+
+                  <div class="checkout-paid-block">
+                    <h3 class="checkout-confirm-sub">Billing &amp; Shipping</h3>
+                    <p class="checkout-confirm-text" data-paid-billing></p>
+                  </div>
+
+                  <a href="./index.html" class="btn checkout-done-btn">Back to home</a>
+                </div>
+              </div>
+
+            </div>
+
+            <aside class="order-summary checkout-card" aria-label="Order summary">
+              <h2 class="order-summary-title">Order summary</h2>
+              <div class="cart-panel-body checkout-items-scroll">
+                <div data-checkout-items></div>
+              </div>
+              <div class="cart-panel-foot">
+                <div data-checkout-totals></div>
+                <p class="checkout-hint-muted">
+                  <a href="./shop.html" class="link">← Back to shop</a> to add more items.
+                </p>
+              </div>
+            </aside>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.jpg')">
+    <div class="footer-top section">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo">PetCart</a>
+          <p class="footer-text">
+            If you have any question, please contact us at <a href="mailto:support@gmail.com"
+              class="link">support@gmail.com</a>
+          </p>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+              <address class="address">30 Buttonwood St.Pataskala OH 43062</address>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+              <a href="tel:+16234567891011" class="contact-link">(+1)-6234-56-789-1011</a>
+            </li>
+          </ul>
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          </ul>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Corporate</p>
+          </li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+          <li><a href="#" class="footer-link">About Us</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <p class="footer-list-title">Information</p>
+          </li>
+          <li><a href="./shop.html" class="footer-link">Online Store</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Shipping Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2022 Made with ♥ by <a href="#" class="copyright-link">codewithsadee.</a></p>
+        <img src="./assets/images/payment.png" width="397" height="32" loading="lazy" alt="payment method" class="img">
+      </div>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <div class="cart-overlay" data-cart-overlay aria-hidden="true"></div>
+
+  <aside class="cart-panel" data-cart-panel aria-hidden="true" aria-labelledby="cart-panel-title">
+    <div class="cart-panel-head">
+      <h2 id="cart-panel-title" class="cart-panel-title">Your cart</h2>
+      <button type="button" class="cart-panel-close" data-cart-close aria-label="Close cart">
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+    <div class="cart-panel-body">
+      <div data-cart-list></div>
+    </div>
+    <div class="cart-panel-foot">
+      <div data-cart-totals></div>
+      <div class="cart-panel-actions">
+        <a href="./checkout.html" class="btn cart-checkout-btn" data-cart-checkout>Checkout</a>
+        <button type="button" class="cart-continue-btn" data-cart-close>Continue shopping</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/cart.js" defer></script>
+  <script src="./assets/js/checkout.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

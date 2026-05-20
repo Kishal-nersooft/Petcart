@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PetCart - Shop</title>
+  <meta name="title" content="PetCart - Shop">
+  <meta name="description" content="PetCart Shop page">
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top" class="shop-body">
+
+  <header class="header header-inner" data-header>
+    <div class="container">
+
+      <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+      </button>
+
+      <a href="./index.html" class="logo">PetCart</a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item navbar-item-dropdown" data-navbar-dropdown>
+            <button type="button" class="navbar-link navbar-dropdown-trigger" aria-expanded="false"
+              aria-haspopup="true">
+              Categories
+              <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+            </button>
+
+            <div class="navbar-dropdown" role="menu">
+              <div class="container navbar-dropdown-panel">
+                <ul class="navbar-dropdown-grid">
+
+                  <li>
+                    <div class="navbar-dropdown-category">
+                      <a href="./shop.html?category=cat-food" class="navbar-dropdown-media" data-nav-link>
+                        <img src="./assets/images/category-1.jpg" width="80" height="72" alt="" loading="lazy">
+                        <span>Cat Food</span>
+                      </a>
+                      <ul class="navbar-dropdown-sublist">
+                        <li><a href="./shop.html?category=dry-cat-food" data-nav-link>Dry Food</a></li>
+                        <li><a href="./shop.html?category=wet-cat-food" data-nav-link>Wet Food</a></li>
+                        <li><a href="./shop.html?category=cat-treats" data-nav-link>Treats</a></li>
+                        <li><a href="./shop.html?category=kitten-food" data-nav-link>Kitten Food</a></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="navbar-dropdown-category">
+                      <a href="./shop.html?category=cat-toys" class="navbar-dropdown-media" data-nav-link>
+                        <img src="./assets/images/category-2.jpg" width="80" height="72" alt="" loading="lazy">
+                        <span>Cat Toys</span>
+                      </a>
+                      <ul class="navbar-dropdown-sublist">
+                        <li><a href="./shop.html?category=interactive-cat-toys" data-nav-link>Interactive Toys</a></li>
+                        <li><a href="./shop.html?category=plush-cat-toys" data-nav-link>Plush Toys</a></li>
+                        <li><a href="./shop.html?category=scratchers" data-nav-link>Scratchers</a></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="navbar-dropdown-category">
+                      <a href="./shop.html?category=dog-food" class="navbar-dropdown-media" data-nav-link>
+                        <img src="./assets/images/category-3.jpg" width="80" height="72" alt="" loading="lazy">
+                        <span>Dog Food</span>
+                      </a>
+                      <ul class="navbar-dropdown-sublist">
+                        <li><a href="./shop.html?category=dry-dog-food" data-nav-link>Dry Food</a></li>
+                        <li><a href="./shop.html?category=wet-dog-food" data-nav-link>Wet Food</a></li>
+                        <li><a href="./shop.html?category=puppy-food" data-nav-link>Puppy Food</a></li>
+                        <li><a href="./shop.html?category=senior-dog-food" data-nav-link>Senior Food</a></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="navbar-dropdown-category">
+                      <a href="./shop.html?category=dog-toys" class="navbar-dropdown-media" data-nav-link>
+                        <img src="./assets/images/category-4.jpg" width="80" height="72" alt="" loading="lazy">
+                        <span>Dog Toys</span>
+                      </a>
+                      <ul class="navbar-dropdown-sublist">
+                        <li><a href="./shop.html?category=chew-toys" data-nav-link>Chew Toys</a></li>
+                        <li><a href="./shop.html?category=balls-fetch" data-nav-link>Balls &amp; Fetch</a></li>
+                        <li><a href="./shop.html?category=rope-toys" data-nav-link>Rope Toys</a></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="navbar-dropdown-category">
+                      <a href="./shop.html?category=dog-supplements" class="navbar-dropdown-media" data-nav-link>
+                        <img src="./assets/images/category-5.jpg" width="80" height="72" alt="" loading="lazy">
+                        <span>Dog Supplements</span>
+                      </a>
+                      <ul class="navbar-dropdown-sublist">
+                        <li><a href="./shop.html?category=vitamins" data-nav-link>Vitamins</a></li>
+                        <li><a href="./shop.html?category=joint-care" data-nav-link>Joint Care</a></li>
+                        <li><a href="./shop.html?category=skin-coat" data-nav-link>Skin &amp; Coat</a></li>
+                      </ul>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./shop.html" class="navbar-link" data-nav-link>Shop</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#events" class="navbar-link" data-nav-link>Events</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#appointments" class="navbar-link" data-nav-link>Appointments</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./about.html" class="navbar-link" data-nav-link>About Us</a>
+          </li>
+
+        </ul>
+
+        <a href="./login.html" class="navbar-action-btn">Log In</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="action-btn" aria-label="Search">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <div class="profile-dropdown-wrapper">
+          <button class="action-btn user" type="button" aria-label="User" aria-haspopup="true" aria-expanded="false"
+            data-profile-trigger>
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+          <div class="profile-dropdown" role="menu" aria-hidden="true" data-profile-dropdown>
+            <a href="./login.html" role="menuitem" data-profile-link data-profile-login>Log In</a>
+            <a href="./wishlist.html" role="menuitem" data-profile-link data-profile-wishlist>Wishlist</a>
+          </div>
+        </div>
+
+        <button class="action-btn" type="button" aria-label="Open shopping cart" data-cart-open>
+          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+          <span class="btn-badge" data-cart-badge>0</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main class="shop-main">
+    <article>
+
+      <section class="section shop-page" aria-label="shop">
+        <div class="container">
+
+          <!-- <div class="shop-page-head">
+            <h2 class="h2 shop-title">Shop</h2>
+            <p class="shop-subtitle">Find the best for your pet.</p>
+          </div> -->
+
+          <div class="shop-categories">
+            <!-- <p class="shop-categories-title">Categories</p> -->
+
+            <ul class="shop-categories-list">
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-01.png" width="56" height="56" alt="Dog" loading="lazy">
+                  <span>Dog</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-02.png" width="56" height="56" alt="Cat" loading="lazy">
+                  <span>Cat</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-03.png" width="56" height="56" alt="Fish" loading="lazy">
+                  <span>Fish</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-04.png" width="56" height="56" alt="Cattle" loading="lazy">
+                  <span>Cattle</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-05.png" width="56" height="56" alt="Snake" loading="lazy">
+                  <span>Snake</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-06.png" width="56" height="56" alt="Sheep" loading="lazy">
+                  <span>Sheep</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-07.png" width="56" height="56" alt="Bird" loading="lazy">
+                  <span>Bird</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-08.png" width="56" height="56" alt="Goat" loading="lazy">
+                  <span>Goat</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-09.png" width="56" height="56" alt="Hamster" loading="lazy">
+                  <span>Hamster</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-10.png" width="56" height="56" alt="Rabbit" loading="lazy">
+                  <span>Rabbit</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-11.png" width="56" height="56" alt="Puppy" loading="lazy">
+                  <span>Puppy</span>
+                </a>
+              </li>
+              <li class="shop-category-item">
+                <a class="shop-category-pill" href="#">
+                  <img src="./assets/images/category images/Categories section-12.png" width="56" height="56" alt="Kitten" loading="lazy">
+                  <span>Kitten</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="shop-layout">
+
+            <aside class="shop-filters" aria-label="filters">
+
+              <div class="filter-card">
+                <p class="filter-title">Categories</p>
+                <ul class="filter-list">
+                  <li><label class="filter-option"><input type="radio" name="cat" checked> <span>All Products</span></label></li>
+                  <li><label class="filter-option"><input type="radio" name="cat"> <span>Dog</span></label></li>
+                  <li><label class="filter-option"><input type="radio" name="cat"> <span>Cat</span></label></li>
+                  <li><label class="filter-option"><input type="radio" name="cat"> <span>Fish</span></label></li>
+                  <li><label class="filter-option"><input type="radio" name="cat"> <span>Bird</span></label></li>
+                </ul>
+              </div>
+
+              <div class="filter-card">
+                <p class="filter-title">Price</p>
+                <div class="price-row">
+                  <div class="price-field">
+                    <span class="price-label">Min</span>
+                    <input class="price-input" type="number" inputmode="numeric" placeholder="0">
+                  </div>
+                  <div class="price-field">
+                    <span class="price-label">Max</span>
+                    <input class="price-input" type="number" inputmode="numeric" placeholder="10000">
+                  </div>
+                </div>
+                <button type="button" class="btn filter-apply-btn">Apply</button>
+              </div>
+
+              <div class="filter-card">
+                <p class="filter-title">Brand</p>
+                <ul class="filter-list">
+                  <li><label class="filter-option"><input type="checkbox"> <span>Royal Canin</span></label></li>
+                  <li><label class="filter-option"><input type="checkbox"> <span>Whiskas</span></label></li>
+                  <li><label class="filter-option"><input type="checkbox"> <span>Pedigree</span></label></li>
+                  <li><label class="filter-option"><input type="checkbox"> <span>GreenVet</span></label></li>
+                </ul>
+              </div>
+
+            </aside>
+
+            <section class="shop-products" aria-label="products">
+              <div class="shop-products-bar">
+                <p class="shop-count">All Products <span class="shop-count-muted">- 8 items</span></p>
+                <div class="shop-sort">
+                  <label class="shop-sort-label" for="sortBy">Sort By:</label>
+                  <select id="sortBy" class="shop-sort-select">
+                    <option selected>Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest</option>
+                  </select>
+                </div>
+              </div>
+
+              <ul class="grid-list shop-grid">
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-1.jpg" width="360" height="360" loading="lazy"
+                        alt="Mixed Munchies 50" class="img-cover default">
+                      <img src="./assets/images/product-1_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Mixed Munchies 50" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(1)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Mixed Munchies 50</a></h3>
+                      <data class="card-price" value="890">LKR 890.00</data>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-2.jpg" width="360" height="360" loading="lazy"
+                        alt="Royal Canin Cat Renal Pouch" class="img-cover default">
+                      <img src="./assets/images/product-2_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Royal Canin Cat Renal Pouch" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper gray">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(0)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Royal Canin Cat Renal Pouch</a></h3>
+                      <data class="card-price" value="688">LKR 688.00</data>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-3.jpg" width="360" height="360" loading="lazy"
+                        alt="Let's Bite Active Adult 10Kg" class="img-cover default">
+                      <img src="./assets/images/product-3_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Let's Bite Active Adult 10Kg" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper gray">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(0)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Let's Bite Active Adult 10Kg</a></h3>
+                      <data class="card-price" value="10000">LKR 10,000.00</data>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-4.jpg" width="360" height="360" loading="lazy"
+                        alt="Greenvet Maxx Cal 50 Tabs" class="img-cover default">
+                      <img src="./assets/images/product-4_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Greenvet Maxx Cal 50 Tabs" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper gray">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(0)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Greenvet Maxx Cal 50 Tabs</a></h3>
+                      <data class="card-price" value="990">LKR 990.00</data>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-5.jpg" width="360" height="360" loading="lazy"
+                        alt="Premium Salmon Cat Kibble" class="img-cover default">
+                      <img src="./assets/images/product-5_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Premium Salmon Cat Kibble" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(2)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Premium Salmon Cat Kibble</a></h3>
+                      <data class="card-price" value="2900">LKR 2,900.00</data>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-6.jpg" width="360" height="360" loading="lazy"
+                        alt="Crunchy Chicken Bites" class="img-cover default">
+                      <img src="./assets/images/product-6_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Crunchy Chicken Bites" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper gray">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(0)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Crunchy Chicken Bites</a></h3>
+                      <data class="card-price" value="2400">LKR 2,400.00</data>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-7.jpg" width="360" height="360" loading="lazy"
+                        alt="Indoor Cat Mix" class="img-cover default">
+                      <img src="./assets/images/product-7_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Indoor Cat Mix" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper gray">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(0)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Indoor Cat Mix</a></h3>
+                      <data class="card-price" value="3200">LKR 3,200.00</data>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="product-card">
+                    <div class="card-banner img-holder" style="--width: 360; --height: 360;">
+                      <img src="./assets/images/product-8.jpg" width="360" height="360" loading="lazy"
+                        alt="Tuna & Salmon Blend" class="img-cover default">
+                      <img src="./assets/images/product-8_0.jpg" width="360" height="360" loading="lazy"
+                        alt="Tuna & Salmon Blend" class="img-cover hover">
+                      <button class="card-action-btn" aria-label="add to card" title="Add To Card">
+                        <ion-icon name="bag-add-outline" aria-hidden="true"></ion-icon>
+                      </button>
+                    </div>
+                    <div class="card-content">
+                      <div class="wrapper">
+                        <div class="rating-wrapper">
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                          <ion-icon name="star" aria-hidden="true"></ion-icon>
+                        </div>
+                        <span class="span">(3)</span>
+                      </div>
+                      <h3 class="h3"><a href="#" class="card-title">Tuna & Salmon Blend</a></h3>
+                      <data class="card-price" value="2800">LKR 2,800.00</data>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+          </div>
+
+        </div>
+      </section>
+
+    
+
+    </article>
+  </main>
+
+  
+        <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" aria-label="service">
+        <div class="container">
+
+          <!-- <img src="./assets/images/service-image.png" width="122" height="136" loading="lazy" alt="" class="img"> -->
+
+          <h2 class="h2 section-title">
+            <span class="span">What your pet needs,</span> when they need it.
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-icon-1.png" width="70" height="70" loading="lazy"
+                    alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">Free Same-Day Delivery</h3>
+
+                <p class="card-text">
+                  Order by 2pm local time to get free delivery on orders LKR 10,500+ today.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-icon-2.png" width="70" height="70" loading="lazy"
+                    alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">30 Day Return</h3>
+
+                <p class="card-text">
+                  35% off your first order plus 5% off all future orders.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-icon-3.png" width="70" height="70" loading="lazy"
+                    alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">Security payment</h3>
+
+                <p class="card-text">
+                  25% off your online order of LKR 15,000+. Available at most locations.
+                </p>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <figure class="card-icon">
+                  <img src="./assets/images/service-icon-4.png" width="70" height="70" loading="lazy"
+                    alt="service icon">
+                </figure>
+
+                <h3 class="h3 card-title">24/7 Support</h3>
+
+                <p class="card-text">
+                  Shop online to get orders over LKR 10,500 shipped fast and free.
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+      
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.jpg')">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="./index.html" class="logo">PetCart</a>
+
+          <p class="footer-text">
+            If you have any question, please contact us at <a href="mailto:support@gmail.com" class="link">support@gmail.com</a>
+          </p>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+
+              <address class="address">
+                30 Buttonwood St.Pataskala OH 43062
+              </address>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+
+              <a href="tel:+16234567891011" class="contact-link">(+1)-6234-56-789-1011</a>
+            </li>
+
+          </ul>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Corporate</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Careers</a>
+          </li>
+
+          <li>
+            <a href="./about.html" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="./contact.html" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQs</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Vendors</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Affiliate Program</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Information</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Online Store</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Refund Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Shipping Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms of Service</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Track Order</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Grooming</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Positive Dog Training</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Veterinary Services</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Petco Insurance</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pet Adoption</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Resource Center</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 Made with ♥ by <a href="#" class="copyright-link">codewithsadee.</a>
+        </p>
+
+        <img src="./assets/images/payment.png" width="397" height="32" loading="lazy" alt="payment method" class="img">
+
+      </div>
+    </div>
+
+  </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+  <div class="cart-overlay" data-cart-overlay aria-hidden="true"></div>
+
+  <aside class="cart-panel" id="cart-panel" data-cart-panel aria-hidden="true" aria-labelledby="cart-panel-title">
+    <div class="cart-panel-head">
+      <h2 id="cart-panel-title" class="cart-panel-title">Your cart</h2>
+      <button type="button" class="cart-panel-close" data-cart-close aria-label="Close cart">
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+    <div class="cart-panel-body">
+      <div data-cart-list></div>
+    </div>
+    <div class="cart-panel-foot">
+      <div data-cart-totals></div>
+      <div class="cart-panel-actions">
+        <a href="./checkout.html" class="btn cart-checkout-btn" data-cart-checkout>Checkout</a>
+        <button type="button" class="cart-continue-btn" data-cart-close>Continue shopping</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="./assets/js/script.js" defer></script>
+  <script src="./assets/js/cart.js" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
+

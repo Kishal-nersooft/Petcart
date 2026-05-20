@@ -1,0 +1,9 @@
+services:
+  petcart:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: petcart-web
+    ports:
+      - "3005:3005"
+    restart: unless-stopped
